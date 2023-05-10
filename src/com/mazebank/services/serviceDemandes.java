@@ -56,7 +56,7 @@ public boolean addDemande(DemandeCredit d,int creditId) {
         String note =d.getNote();
         String cin1 =d.getCin1();
         String cin2 =d.getCin2();
-        String url =Statics.BASE_URL+"/addDemandeCreditJSON/"+creditId
+        String url =Statics.BASE_URL+"addDemandeCreditJSON/"+creditId
                                                              +"?amount="+d.getAmount()                                                                                                          
                                                              +"&note="+d.getNote()
                                                              +"&cin1="+d.getCin1()
@@ -130,7 +130,7 @@ public boolean addDemande(DemandeCredit d,int creditId) {
     }
 
     public ArrayList<DemandeCredit> getAllDemandes() {
-        String url = Statics.BASE_URL + "/cdemande/credit/";
+        String url = Statics.BASE_URL + "cdemande/credit/";
         req.setUrl(url);
         req.setPost(false);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -145,7 +145,7 @@ public boolean addDemande(DemandeCredit d,int creditId) {
     }
 //Update 
     public boolean modifier(DemandeCredit transaction) {
-        String url = Statics.BASE_URL +"/updateDemandeCreditJSON/"+(int)transaction.getId()+"?note="+transaction.getNote();
+        String url = Statics.BASE_URL +"updateDemandeCreditJSON/"+(int)transaction.getId()+"?note="+transaction.getNote();
         req.setUrl(url);
         System.out.println("url modif : "+url);
         req.addResponseListener(new ActionListener<NetworkEvent>() {
@@ -163,7 +163,7 @@ public boolean addDemande(DemandeCredit d,int creditId) {
   
     public int delete(int id) {
         req = new ConnectionRequest();
-        req.setUrl(Statics.BASE_URL + "/deleteDemandeCreditJSON/"+id);
+        req.setUrl(Statics.BASE_URL + "deleteDemandeCreditJSON/"+id);
         System.out.println("url delete : "+req);
         req.setHttpMethod("POST");
         

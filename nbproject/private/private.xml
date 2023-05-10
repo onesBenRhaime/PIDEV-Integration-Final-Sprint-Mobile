@@ -3,10 +3,22 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/eshop/src/com/mazebank/utils/DateUtils.java</file>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/eshop/src/com/mazebank/MainApp.java</file>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/eshop/src/com/mazebank/utils/Statics.java</file>
-            <file>file:/C:/Users/BAZINFO/Documents/NetBeansProjects/eshop/src/com/mazebank/services/TransactionService.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/transaction/ShowAllStatistiques.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/eshop/gui/Accueil.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/services/serviceDemandes.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/transaction/Edit.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/demande/ShowAllDemandeCarte.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/demande/ShowAllStatistiquesDemandeCarte.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/offre/AfficherToutOffreEmbauche.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/demande/ManageDemandeCarte.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/offre/AfficherToutOffreInvestissement.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/credit/updateDemande.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/offre/AfficherToutOffreAssurance.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/entities/OffreAssurance.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/utils/Statics.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/transaction/ShowAll.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/services/CarteBancaireService.java</file>
+            <file>file:/C:/Users/BAZINFO/Documents/Sprint%20Mobile/ones/eshop/src/com/mazebank/gui/credit/listDemandesCredits.java</file>
         </group>
     </open-files>
 </project-private>

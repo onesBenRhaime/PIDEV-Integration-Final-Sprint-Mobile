@@ -137,7 +137,7 @@ public class CarteBancaireService {
         cr = new ConnectionRequest();
         
         cr.setHttpMethod("POST");                                               
-            cr.setUrl(Statics.BASE_URL + "carte/bancaire/updateDemandeUserCartesJSON/?id="+(int)cartebancaire.getId()+"&email="+cartebancaire.getEmail()+"&identifier="+cartebancaire.getIdentifier()+"&description="+cartebancaire.getDescription()+"&cinS1="+cartebancaire.getCinS1());
+            cr.setUrl(Statics.BASE_URL + "carte/bancaire/updateDemandeUserCartesJSON/?id="+(int)cartebancaire.getId()+"&email="+cartebancaire.getEmail()+"&identifier="+cartebancaire.getIdentifier()+"&description="+cartebancaire.getDescription());
             cr.addArgument("id", String.valueOf(cartebancaire.getId()));
      
         

@@ -12,9 +12,10 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 import com.codename1.ui.plaf.Style;
+import com.eshop.gui.Accueil;
 public class ShowAll extends Form {
 
-    Form previous; 
+    Form previous;  
     
     public static Transaction currentTransaction = null;
     Button addBtn;
@@ -22,10 +23,13 @@ public class ShowAll extends Form {
     public ShowAll(Form previous) {
         super("Transactions", new BoxLayout(BoxLayout.Y_AXIS));
         this.previous = previous;
-
         addGUIs();
         addActions();
-
+          FloatingActionButton.setIconDefaultSize(5);
+         FloatingActionButton fa = FloatingActionButton.createFAB(FontImage.MATERIAL_STORE);
+         fa.addActionListener(e -> new Accueil().show());
+         fa.bindFabToContainer(previous.getContentPane());
+        
         super.getToolbar().addMaterialCommandToLeftBar("  ", FontImage.MATERIAL_ARROW_BACK, e -> previous.showBack());
     }
 

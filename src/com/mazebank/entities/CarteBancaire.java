@@ -33,6 +33,13 @@ public class CarteBancaire {
         this.cinS1 = cinS1;
     }
 
+    public CarteBancaire(String email, String identifier, String description) {
+       
+        this.email = email;
+        this.identifier = identifier;
+        this.description = description;
+    }
+
     
     public int getId() {
         return id;

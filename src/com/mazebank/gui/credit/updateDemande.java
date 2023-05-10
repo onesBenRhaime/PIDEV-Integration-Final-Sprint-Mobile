@@ -30,27 +30,21 @@ public class updateDemande extends Form {
             btnModifier.setUIID("buttonCenter"); 
             Button btnAnnuler = new Button("Annuler");         
             btnAnnuler.setUIID("buttonCenter");  
-         
+             
          
         
-        btnModifier.addActionListener(new ActionListener() {
+        btnModifier.addActionListener( new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent evt) {
-                Form f2 = new Form(BoxLayout.y());
-                Label lnote=new Label(" "+note.getText());
-               
-                f2.add(lnote);
-                        f2.show();
-                        r.setNote(note.getText());
-              if(serviceDemandes.getInstance().modifier(r)) { 
-                new listDemandesCredits(previous).show();
-              }            
+                
+              serviceDemandes.getInstance().modifier(r);
             }
         });
             addAll(note,btnAnnuler,btnModifier);
         btnAnnuler.addActionListener(e -> {
            new listDemandesCredits(previous).show();
         });
+          
     }
   
 }

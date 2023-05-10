@@ -20,7 +20,7 @@ public class ManageDemandeCarte extends Form {
             TextField email = new TextField("", "email");
             TextField identifier = new TextField("", "identifier");
             TextField description = new TextField("", "description");
-            TextField cinS1 = new TextField("", "cinS1");
+           // TextField cinS1 = new TextField("", "cinS1");
             
         
         Button btnValider = new Button("Add ");
@@ -38,19 +38,19 @@ public class ManageDemandeCarte extends Form {
                 Label lemail=new Label("email: "+email.getText());
                 Label lidentifier=new Label("identifier: "+identifier.getText());
                 Label ldescription=new Label("description : "+description.getText());
-                Label lcinS1=new Label("cinS1: "+cinS1.getText());
+               // Label lcinS1=new Label("cinS1: "+cinS1.getText());
                 
                 f2.add(lemail);
                 f2.add(lidentifier);
                 f2.add(ldescription);
-                f2.add(lcinS1);                
+              //  f2.add(lcinS1);                
                 f2.show();
-                if ((email.getText().length()==0)&&(identifier.getText().length()==0)&&(description.getText().length()==0)&&(cinS1.getText().length()==0)){
+                if ((email.getText().length()==0)&&(identifier.getText().length()==0)&&(description.getText().length()==0)){
                     //Dialog.show("Veuillez vérifier les données","","Annuler", "OK");
                    Dialog.show("Alert", "Please fill all the fields", new Command("OK"));
                    new ManageDemandeCarte(previous).show();
                 } else{ 
-                             CarteBancaire t = new CarteBancaire(email.getText(),identifier.getText(),description.getText(),cinS1.getText());
+                             CarteBancaire t = new CarteBancaire(email.getText(),identifier.getText(),description.getText());
                             if( CarteBancaireService.getInstance().addTask(t))
                             {
                                Dialog.show("Success","Demande ajoutée",new Command("OK"));
@@ -63,7 +63,7 @@ public class ManageDemandeCarte extends Form {
             }
         });
         
-        addAll(email,identifier,description,cinS1,btnValider);
+        addAll(email,identifier,description,btnValider);
                 
     }
     

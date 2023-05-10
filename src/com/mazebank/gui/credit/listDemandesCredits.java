@@ -5,15 +5,20 @@
  */
 package com.mazebank.gui.credit;
 
+import com.codename1.components.FloatingActionButton;
 import com.codename1.ui.Button;
+import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Font;
 import com.codename1.ui.FontImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BoxLayout;
+import com.eshop.gui.Accueil;
 import com.mazebank.entities.Credit;
 import com.mazebank.entities.DemandeCredit;
+import com.mazebank.entities.Transaction;
+import com.mazebank.gui.demande.ManageDemandeCarte;
 import com.mazebank.services.serviceDemandes;
 import java.util.ArrayList;
 
@@ -23,27 +28,32 @@ import java.util.ArrayList;
  */
 public class listDemandesCredits extends Form {
 
-Form previous;
+Form previous; Form f;
+
 public static DemandeCredit currentTransaction = null;
 
   public listDemandesCredits(Form previous) {
+
         setTitle("List of demandes");
         setLayout(BoxLayout.y());
-
+      getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e -> previous.showBack());
         /*SpanLabel sp = new SpanLabel();
         sp.setText(ServiceTask.getInstance().getAllTasks().toString());
         add(sp);
          */
         ArrayList<DemandeCredit> demandes = serviceDemandes.getInstance().getAllDemandes();
-        for (DemandeCredit d : demandes) {
+        if (demandes.size() > 0) {
+             for (DemandeCredit d : demandes) {
             addElement(d);
         }
+        } else {
+            this.add(new Label("Aucune donnée"));
+        }
+        
+      
+        
+ }
 
-        getToolbar().addMaterialCommandToLeftBar("", FontImage.MATERIAL_ARROW_BACK, e -> previous.showBack());
-
-    }
-
-   
 
     public void addElement(DemandeCredit demandeCredit) {
          Container container = new Container(new BoxLayout(BoxLayout.Y_AXIS));
@@ -65,7 +75,10 @@ public static DemandeCredit currentTransaction = null;
     deleteButton.setIcon(FontImage.createMaterial(FontImage.MATERIAL_DELETE, deleteButton.getUnselectedStyle()));
 
     deleteButton.addActionListener(evt -> {
+         currentTransaction =demandeCredit;
           serviceDemandes.getInstance().delete(demandeCredit.getId());
+            new Accueil().show();
+          
 
     });
         container.add(deleteButton);
@@ -83,6 +96,8 @@ public static DemandeCredit currentTransaction = null;
   
     add(container);
     }
+    
+    
 }
  
 
